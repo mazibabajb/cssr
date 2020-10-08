@@ -1,0 +1,15 @@
+{% extends 'teacherapp/base.html' %}
+ {% block content %}
+ {% load static %}
+<div class="contact">
+        <h2>You Can Contact Us Or Visit Us</h2>
+  
+            <form method="POST">
+              {% csrf_token %}
+            {{ form.as_p }}
+             <button>Submit</button>
+             </form>
+
+    </div>
+    
+  {% endblock content %}  

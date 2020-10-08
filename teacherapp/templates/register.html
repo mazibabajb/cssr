@@ -1,0 +1,15 @@
+{% extends 'tutors/base3.html' %}
+ {% block content %}
+ {% load static %}
+<div class="contact">
+        <h2>You Can Contact Us Or Visit Us</h2>
+          <h1>REGISTER AS  TUTOR ON CSSR</h1>
+            <form method="POST">
+              {% csrf_token %}
+            {{ form.as_p }}
+             <button>Submit</button>
+             </form>
+
+    </div>
+    
+  {% endblock content %}  

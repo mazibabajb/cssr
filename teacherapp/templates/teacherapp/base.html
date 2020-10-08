@@ -1,0 +1,106 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatable" content="ie-adge">
+    <link rel="stylesheet" type="text/css" href="{% static 'teacherapp/css/style.css' %}">
+	<link href="{% static 'teacherapp/img/favicon.jpg' %}" rel="shortcut icon"/>
+    <script src="https://kit.fontawesome.com/c71fd77aaa.js" crossorigin="anonymous"></script>
+	<title>Center for Social Sciences Research</title>
+</head>
+<body>
+    <img src="% static 'teacherapp/img/ham.svg' %}" alt="menubar" class="menu-icon">
+	<div class="container">
+	<div class="upper-nav">
+		<li><img src="{% static 'teacherapp/img/facebook.png' %}"></li>
+		<li><img src="{% static 'teacherapp/img/twitter.png' %}"></li>
+		<li><img src="{% static 'teacherapp/img/youtube.png' %}"></li>
+        <li><a href="#"><button>Student Portal</button></a></li> 
+        <li><a href="{% url 'contact' %}">Contact Us</a></li> 
+        <li><a href="{% url 'home' %}">home</a></li> 
+	</div>
+    <div class="lower-nav">
+    	<ul class="main ">
+    	<h2><a href="{% url 'home' %}"><img src="{% static 'teacherapp/img/favicon.jpg' %}"></a></h2>
+    	<li class="dropdown"><a href="{% url 'about' %}">About</a>
+        <div class="dropdown-content">
+         <a href="{% url 'about' %}">Mission</a>
+         <a href="{% url 'about' %}">Vision</a>
+         <a href="{% url 'about' %}">Values</a>
+         </div>
+    	</li>
+    	<li><a href="{% url 'admissions' %}">Admissions</a></li>
+    	<li class="dropdown"><a href="#">learners</a>
+        <div class="dropdown-content">
+         <a href="#">O level</a>
+         <a href="#">A level</a>
+         <a href="#">Profesionals</a>
+         <a href="#">Engineiring</a>
+         <a href="#">Zimsec</a>
+         <a href="#">Cambridge</a>
+        </div>
+    	</li>
+    	<li class="dropdown"><a href="#">Faculties</a>
+        <div class="dropdown-content">
+         <a href="{% url 'business' %}">Bussiness</a>
+         <a href="{% url 'hospitality' %}">Hospitality</a>
+         <a href="#">Enginering</a>
+         <a href="{% url 'infomation' %}">Infomation Technology</a>
+         <a href="{% url 'social' %}">Social Science</a>
+        </div>
+    	</li>
+    	<li><a href="{% url 'fees' %}">fees</a></li>
+    	</ul>
+    </div>
+            {% if messages %}
+            {% for message in messages %}
+             <div class="covid">
+            <h2 class="m{{ message.tags }}">{{ message }}</h2>
+            
+        </div>
+            {% endfor %}
+            {% endif %}
+            </div>
+    {% block content %}
+
+    {% endblock content %}
+
+     <div class="footer"> 
+        <ul> 
+         <h2>Visit Us</h2>  
+        <li>Africa house suit 413</li>
+        <li>Corner fife street and 10th ave</li>
+        <li>Bulawayo</li>
+        <li>Zimbabwe</li>
+     </ul> 
+        <ul> 
+        <h2>Contact Us</h2>  
+        <li>+263 292264178</li>
+        <li>+263 782096764</li>
+        <li>+263 773224317</li>
+        <li>info@cssr.co.zw</li>
+     </ul> 
+        <ul> 
+        <h2>Follow Us</h2>  
+        <li><a href="www.facebook.com/cssr">Facebook</a></li>
+        <li>twitter</li>
+        <li>instagram</li>
+        <li>linklin</li>
+     </ul> 
+
+     </div>
+
+     </div>
+     
+    </div>
+
+<script>
+        document.querySelector('.menu-icon').addEventListener
+        ('click', () => document.querySelector('.main').classList.toggle('show'));
+    </script>
+</body>
+
+</html>

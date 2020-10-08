@@ -1,0 +1,19 @@
+{% extends 'teacherapp/base.html' %}
+ {% block content %}
+ {% load static %}
+ <div class="bussiness-hero">
+    </div>
+    <div class="bussiness-content"> 
+        <h1>Our Bussiness Courses</h1>
+        <h2>We are a leading institution in training bussines leades and captains, <br>  We have a divarse choice for you to choose from </h2>
+        <ul> 
+            <li><a href="{% url 'accounting' %}">Accounting</a></li> 
+            <li><a href="{% url 'marketing' %}">Marketing</a></li>  
+            <li><a href="{% url 'businessm' %}">Business Management</a></li>  
+            <li><a href="{% url 'hrm' %}">Human Resource Management</a></li>             
+        </ul>
+
+    </div>
+
+
+ {% endblock content %}
